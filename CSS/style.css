@@ -1,0 +1,144 @@
+
+/*removendo decorações e definindo estilo de formatação de texto*/
+
+*{
+    text-decoration: none;
+    list-style: none;
+    font-size: 16.5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+
+    min-height: 100vh;
+    min-width: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(0deg, rgb(128, 192, 201), #2a60d6b9);
+}
+
+/*Corpo principal do login*/
+
+.Corpo-principal{
+
+    background-color: rgb(218, 218, 218);
+    border-radius: 5vh;
+    
+    min-height: 75vh;
+    width: 125vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/*Corpo de preenchimento para login*/
+
+.Campo-dados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    
+}
+
+/*formulário para preenchimento de login*/
+
+.Dadospreenchimento{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+/*Dar um arrendondamento as duas barras de login de nome e senha*/
+
+.Bardado{
+    border-radius: 10px;
+    width: 75%;
+}
+
+
+/*Botão para fazer login*/
+
+.Botaologin{
+    background-color: white;
+    color: blueviolet;
+    
+    border: none;
+    border-radius: 1vh;
+
+    width: 15vh;
+    height: 4vh;
+    
+}
+
+/*duração da animação do botão de login*/
+
+.Botaologin{
+    transition-duration: 0.5s;
+}
+
+/*Animação ao passar o mouse por cima do botão*/
+
+.Botaologin:hover{
+    background-color: rgb(163, 105, 218);
+    color: white;
+}
+
+/*Animação ao clicar no botão*/
+
+.Botaologin:active{
+    background-color: rgb(73, 22, 121);
+    box-shadow: 0 5px rgb(83, 71, 81);
+
+    color: white;
+
+    transform: translateY(4px);
+}
+
+/*Esqueci senha*/
+
+.Esqsenha{
+    font-size: 20px;
+    font-style: italic;
+    color: #194569;
+}
+
+/*Corpo de informações na lateral*/
+
+.Campo-info{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Imgtextlogo{
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    max-width: 100%;
+}
+
+/*Ajustar as duas imagens*/
+
+.Imgtext{
+    max-width: 200px;
+    max-width: 75%;
+}
+
+.Imglogin{
+    max-width: 250px;
+    max-width: 100%;
+}
+
