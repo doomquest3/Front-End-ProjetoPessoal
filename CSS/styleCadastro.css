@@ -1,6 +1,6 @@
 
 /*Tamanho da tela de fundo*/
-body{
+.corpo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@ body{
 
 .formDados h1{
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
 }
@@ -120,14 +120,98 @@ body{
 
 .descricao p{
     color: white;
-    width: 300px;
+    width: 80%;
     font-size: 20px;
+    margin: 0 auto;
 }
 
 
 /*imagem do banco*/
 
 .imgBanco{
-    width: 500px;
-    height: 150px;
+    width: 80%;
+    height: 100%;
+}
+
+
+
+/*--------------------------------Responsividade--------------------------------*/
+
+
+@media (max-width:768px) {
+
+    /*Ajustando tamanho da tela para caber todo o menu.*/
+
+    .corpo{
+        height: 100%;
+    }
+
+    /*Ajustando ordenamento dos itens.*/
+
+    .corpo-principal{
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+
+        border-radius: 100px 100px 0 0 ;
+
+        
+    }
+
+    /*Ajustando afastamento do topo da tela do formulário de cadastro.*/
+    
+    .formDados{
+        margin: 25px 0 0 0;
+    }
+    
+    /*Ajustando espaçamento do título para o formulário e da imagem do banco para o formulário.*/
+
+    .quadro-dados{
+        margin: 5px 0 10px 0;
+    }
+
+    /*Ajustando o tamanho do botão*/
+    
+    .botao-form{
+        width: 100px;
+        height: 25px;
+        margin: 5px 0 0 0;
+    }
+
+    /*Ajustar alinhamento da imagem e descrição.*/
+
+    .descricao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*ajustando alinhamento interno da div onde a imagem esta*/
+
+    .descricao div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+/*Responsividade para dispositivos menores que - L movél 425px*/
+
+@media (max-width: 425px) {
+    .formDados h1{
+        font-size: 25px;
+    }
+
+    .quadro-dados label{
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .quadro-dados input{
+        padding: 1px;
+    }
+
+    
 }
