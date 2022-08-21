@@ -32,24 +32,36 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 
 .formDados h1{
     color: white;
     font-size: 40px;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 /*--------------------------------Formulário--------------------------------*/
+
+.formulario{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 75%;
+    height: 100%;
+
+}
 
 .quadro-dados{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 
-    width: 75%;
-    height: 70%;
+    width: 100%;
+    height: 90%;
     
     text-align: center;
     border: 2px solid white;
@@ -83,19 +95,23 @@
     border-radius: 5px;
     background: white;
     
-    height: 30px;
-    width: 100px;
+    height: 35px;
+    width: 75%;
 
     font-size: 14px;
     transition: 0.5s;
 
-    
+    align-self: center;
 }
+
+/*Ao passar o icone do mouse em cima do botão.*/
 
 .botao-form:hover{
     background: rgb(156, 156, 156);
     color: white;
 }
+
+/*Ao clicar no botão de cadastro*/
 
 .botao-form:active{
     background: white;
@@ -107,6 +123,7 @@
 /*--------------------------------Quadro lateral--------------------------------*/
 
 .descricao{
+
     width: 100%;
     height: 100%;
     
@@ -117,6 +134,8 @@
     align-items: center;
 
 }
+
+/*Estulização paragrafo da descrição da tela de cadastro*/
 
 .descricao p{
     color: white;
@@ -156,7 +175,6 @@
 
         border-radius: 100px 100px 0 0 ;
 
-        
     }
 
     /*Ajustando afastamento do topo da tela do formulário de cadastro.*/
@@ -174,7 +192,6 @@
     /*Ajustando o tamanho do botão*/
     
     .botao-form{
-        width: 100px;
         height: 25px;
         margin: 5px 0 0 0;
     }
@@ -195,11 +212,21 @@
         justify-content: center;
     }
 
+    /*Aumentando margem do botão para os inputs acima dele.*/
+    
+    .botao-form{
+        margin: 10px 0 0 0;
+    }
 }
 
 /*Responsividade para dispositivos menores que - L movél 425px*/
 
 @media (max-width: 425px) {
+
+    .formulario{
+        align-items: center;
+    }
+
     .formDados h1{
         font-size: 25px;
     }
@@ -212,6 +239,8 @@
     .quadro-dados input{
         padding: 1px;
     }
-
+    
     
 }
+
+

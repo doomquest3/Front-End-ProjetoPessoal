@@ -10,42 +10,53 @@
 <body class="corpo">
     <main class="corpo-principal">
         <section class="formDados">
-                <h1>Criação de conta</h1>          
 
-            <fieldset class="quadro-dados">
+                <h1>Cadastro de usuário</h1>          
 
-                <legend class="teste">Formulário de cadastro</legend>
+            <form action="" method="post" class="formulario">
+                <fieldset class="quadro-dados">
 
-                <label for="fnome">Nome completo</label>
-                <input type="text" name="" id="fnome" required placeholder="Ex:Maria josé das dores">
-                
-                <label for="fmail">E-mail</label>
-                <input type="email" name="" id="fmail" required placeholder="fulano@gmial.com">
-
-                <label for="fCPF">CPF</label>
-                <input type="text" name="" id="fCPF" required placeholder="xxx.xxx.xxx-xx">
-                
-                <label for="fnascimento">Data de nascimento</label>
-                <input type="date" name="" id="fnascimento" required>
-
-                <label for="fsenha">Senha</label>
-                <input type="password" name="" id="fsenha">
-
-                <button type="submit" class="botao-form">Cadastrar</button>
-
-            </fieldset>
+                    <legend class="teste">Formulário de cadastro</legend>
+    
+                    <label for="fnome">Nome completo</label>
+                    <input type="text" name="" id="fnome" required placeholder="Ex:Maria josé das dores">
+                    
+                    <label for="fmail">E-mail</label>
+                    <input type="email" name="" id="fmail" required placeholder="fulano@gmial.com">
+    
+                    <label for="fCPF">CPF</label>
+                    <input type="text" name="" id="fCPF" required placeholder="xxx.xxx.xxx-xx">
+                    
+                    <label for="fnascimento">Data de nascimento</label>
+                    <input type="date" name="" id="fnascimento" required>
+    
+                    <label for="fsenha">Senha</label>
+                    <input type="password" name="" id="fsenha">
+    
+                    <button type="submit" class="botao-form" id="botaoEnvio">Cadastrar</button>
+    
+                </fieldset>
+            </form>
         </section>
 
         <section class="descricao">
+
             <div>
+
                 <img src="./Imagens/LogoBanco1.png" alt="Logo do banco genérico" class="imgBanco">
+                
             </div>
+
             <p>
+
                 Bem-vindo(a)! <br>
                 Por favor, preencha todos os dados de acordo com o que é requisitado no Formulário
                 para que seja feita a criação da sua conta com sucesso
+
             </p>
+
         </section>
     </main>
+    <script src="./JS/configuracao.js"></script>
 </body>
 </html>
