@@ -1,0 +1,230 @@
+
+/*Estilo geral da página*/
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+
+    /*ajustar tamanho dos objetos levando em consideração preenchimento e espaçamento*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;  
+}
+
+
+/*
+
+
+-----------------Disposição no layout principal-----------------
+
+
+
+*/
+
+body{
+    width: 100%;
+    height: 100%;
+    background: cornflowerblue;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+/*Quadros de lançamento, entrada e saída*/
+
+.quadrado-lancamento{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Definido tamanho, espaçamento, cor e distribuição de itens dos três blocos superiores*/
+
+.qud-dado{
+    width: 100%;
+    height: 20vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: whitesmoke;
+
+    margin: 0 5px;
+    padding: 1%;
+    border-radius: 1rem;
+
+    text-align: end;
+    
+}
+
+
+/*reduzir tamanho da letra do título*/
+
+.qud-dado h3{
+    font-size: 2rem;
+}
+
+/*Tamanho do número da quantidade das três caixas de dados*/
+
+.qud-dado h1{
+    font-size: 3em;
+    background: cornflowerblue;
+    padding: 0 5px;
+    border-radius: 1rem;
+}
+
+/*
+Título dos dados de lançamento, Entrada e Saída
+Ajustando o espaçamento entre a figura e o título
+*/
+
+.titulo-dado{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+
+/*
+-------------------------------------------------------------
+Subsecção valores Entrada, saída e total de caixa
+-------------------------------------------------------------
+*/
+
+
+
+/*Ajustando tamanho do preenchimento de dados, bordas, cor e estilo de distribuição de itens*/
+
+.subsection-valores{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "h vs vs vt"
+                         "h ve ve vt"
+    ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 0.75fr;
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem;
+}
+
+/*Histórico de transações*/
+.historico{
+    background: whitesmoke;
+    
+    grid-area: h;
+
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1rem;
+    
+    border-radius: 1rem;
+}
+
+.tblHistorico{
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+.tblHistorico thead{
+    background: cornflowerblue;
+    
+}
+
+
+
+
+
+/*Tabela de dados de Saída do cliente*/
+
+.dadoValorSaida{
+    grid-area: vs;
+
+    background: whitesmoke;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+.dadoValorSaida h1{
+    background: cornflowerblue;
+    border-radius: 1rem;
+    padding: 0 1.5rem;
+    text-align: end;
+    
+    
+}
+
+.dadoValorEntrada{
+    grid-area: ve;
+
+    background: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+.dadoValorEntrada h1{
+    background: cornflowerblue;
+    border-radius: 1rem;
+    padding: 0 1.5rem;
+    text-align: end;
+    
+    
+}
+
+/*Aumentando tamanho da título de valores*/
+.valor{
+    font-size: 1.5rem;
+}
+
+/*Total de dinheiro na conta*/
+
+.totalDinheiro{
+    grid-area: vt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: whitesmoke;
+
+    border-radius: 1rem;
+
+    padding: 1rem;
+    height: 25rem;
+}
+
+.totalDinheiro h3{
+    font-size: 1.25rem;
+}
+
+.totalDinheiro h1{
+    background: cornflowerblue;
+    border-radius: 1rem;
+    padding: 0 1.5rem;
+    text-align: end;
+    
+}
+
+
+
+

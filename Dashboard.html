@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./CSS/styleDashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <main>
+
+        
+        <!--Quadros de lançamento, Entradas e Saídas-->
+        
+        <div class="quadrado-lancamento">
+
+            <!--Quantidade de lançamento-->
+
+            <div class="qud-dado">
+
+                <div class="titulo-dado">
+                    <span class="material-icons">savings</span>
+                    <h3>Lançamento</h3>
+                </div>
+         
+                <section>
+                    <p>Quantidade</p>
+                    <h1 id="qtdLancamento">50</h1>
+                </section>
+
+            </div>
+
+            <!--Quantidade de Entrada-->
+
+            <div class="qud-dado">
+                
+                <div class="titulo-dado">
+                    <span class="material-symbols-outlined">attach_money</span>
+                    <h3>Entrada</h3>
+                </div>
+                
+                <div>
+                    <p>Quantidade</p>
+                    <h1 id="qtdEntrada">50</h1>
+                </div>
+                
+            </div>
+
+            <!--Quantidade de saída-->
+
+            <div class="qud-dado">
+
+                <div class="titulo-dado">
+                    <span class="material-icons">savings</span>
+                    <h3>Saída</h3>
+                </div>
+
+                <div>
+                    <p>Quantidade</p>
+                    <h1 id="QtdSaida">50</h1>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <!--Final quadro de lançamento, Entradas e Saída-->
+
+
+        <!--
+            Subsecção:
+            - Histórico
+            - valor Saída total
+            - Valor Entrada
+            - Saldo total
+        -->
+        
+
+        <div class="subsection-valores">
+
+            
+            <div class="historico">
+                <!--Tabela de histórico de transações-->
+                <div class="titulo-dado valor">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <h3>histórico</h3>
+                </div>
+                <!--Tabela de histórico-->
+                <table class="tblHistorico" cellspacing="0" cellpadding="0">
+                    
+                    <thead >
+                        <tr>
+                            <th>Data</th>
+                            <th>Transação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Data
+                            </td>
+                            <td>
+                                R$ 500
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Data
+                            </td>
+                            <td>
+                                <p>
+                                    R$ 500
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+                
+                <!--Valor saída total-->
+            <div class="dadoValorSaida">
+
+                <div class="titulo-dado valor">
+                    <span class="material-symbols-outlined">attach_money</span>
+                    <h3>Valor total de saída</h3>
+                </div>
+                    
+                <h1 id="qtdValorSaida">R$ 500,00</h1>
+                    
+            </div>
+                <!--Final saída total-->
+
+                <!--Valor Entrada total-->
+            <div class="dadoValorEntrada">
+
+                <div class="titulo-dado valor">
+                    <span class="material-symbols-outlined">currency_exchange</span>
+                    <h3>Valor total de Entrada</h3>
+                </div>
+
+                <h1 id="qtdValorEntrada"> R$ 2.000,00</h1>
+
+            </div>
+            <!--Final Entrada total-->
+
+            
+            
+
+            <!--Saldo Caixa/total-->
+            <div class="totalDinheiro">
+
+                <div class="titulo-dado">
+                    <span class="material-symbols-outlined">account_balance</span>
+                    <h3>Valor total de caixa</h3>
+                </div>
+
+                <h1 id="qtdValorTotal"> R$ 1.500,00</h1>
+
+            </div>
+            <!--Final Saldo total-->
+
+        </div>
+        
+        
+
+    </main>
+    
+</body>
+</html>
