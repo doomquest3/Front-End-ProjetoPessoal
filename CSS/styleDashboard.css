@@ -1,5 +1,10 @@
 
+/*Importando fontes do google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@300&display=swap');
+
 /*Estilo geral da página*/
+
 *{
     list-style: none;
     text-decoration: none;
@@ -8,73 +13,121 @@
     font-family: 'Times New Roman', Times, serif;
 
     /*ajustar tamanho dos objetos levando em consideração preenchimento e espaçamento*/
+
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;    
     box-sizing: border-box;  
 }
 
+/*
+    =============================================================
+    Variaveis para controle de cores e animação.
+    =============================================================
+*/
+
+:root{
+
+    /*------Cores - modo vespetino/light mode------*/
+    
+    --body-color: rgb(70, 100, 156); 
+    --qud-color: whitesmoke;
+    --br-dado-color: cornflowerblue;
+    --icone-bg-color: #7063e7;
+    --tbl-border-color: #11163c;
+
+    /*------Transição------*/
+
+    --tran-03: all 0.4s ease;
+    --tran-03: all 0.4s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.4s ease;
+    
+    
+}   
+
 
 /*
-
-
------------------Disposição no layout principal-----------------
-
-
-
+    =============================================================
+    Disposição no layout principal.
+    =============================================================
 */
 
 body{
     width: 100%;
     height: 100%;
-    background: cornflowerblue;
+    background: var(--body-color);
     padding: 2em 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
-/*Quadros de lançamento, entrada e saída*/
+/*
+=============================================================
+Corpo principal dos valores de lançamento, entrada e saída.
+=============================================================
+*/
 
+/**/
+
+ 
 .quadrado-lancamento{
-    display: flex;
-    justify-content: center;
     width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    margin: 0 0 0.5rem 0;    
+}
+
+@media (max-width: 425px) {
+    .quadrado-lancamento{
+        display: grid;
+        grid-auto-flow: row;
+        gap: 1rem;
+    }
+    .quadrado-lancamento:nth-child(1){
+        grid-row: 1;
+    }
+    .quadrado-lancamento:nth-child(2){
+        grid-row: 2;
+    }
+    .quadrado-lancamento:nth-child(3){
+        grid-row: 3;
+    }
 }
 
 /*Definido tamanho, espaçamento, cor e distribuição de itens dos três blocos superiores*/
 
 .qud-dado{
     width: 100%;
-    height: 20vh;
-
+    height: 100%;
+        
     display: flex;
     flex-direction: column;
 
-    background-color: whitesmoke;
-
-    margin: 0 5px;
+    background-color: var(--qud-color);
     padding: 1%;
-    border-radius: 1rem;
-
     text-align: end;
-    
+        
 }
 
 
 /*reduzir tamanho da letra do título*/
 
 .qud-dado h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /*Tamanho do número da quantidade das três caixas de dados*/
-
+.qud-dado :is(p){
+    font-size: 1.25rem;
+}
 .qud-dado h1{
-    font-size: 3em;
-    background: cornflowerblue;
+    font-size: 2rem;
     padding: 0 5px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    background: var(--br-dado-color);
 }
 
 /*
@@ -84,71 +137,89 @@ Ajustando o espaçamento entre a figura e o título
 
 .titulo-dado{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
-
 }
 
 
+/*Adicionando fundo com cor a cada ícone*/
+
+.titulo-dado :is(span){
+    background-color: var(--icone-bg-color);
+    padding: 0.25rem;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+}
+
 
 /*
--------------------------------------------------------------
+=============================================================
 Subsecção valores Entrada, saída e total de caixa
--------------------------------------------------------------
+=============================================================
 */
 
 
 
-/*Ajustando tamanho do preenchimento de dados, bordas, cor e estilo de distribuição de itens*/
+/*
+    Ajustando tamanho do preenchimento de dados, bordas, cor e estilo de distribuição de itens na
+    seção principal da tela.
+*/
+
 
 .subsection-valores{
     width: 100%;
     height: 100%;
+
     display: grid;
     grid-template-areas: "h vs vs vt"
-                         "h ve ve vt"
+                        "h ve ve vt"
     ;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 0.75fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
-    margin: 1rem 0 0 0;
-    padding: 0.5rem;
 }
+
+/*Ajustando tamanho dos títulos das tabelas: valor saída, entrada e total de caixa*/
+
+.subsection-valores h3{
+    font-size: 1.5rem;
+}
+
+
 
 /*Histórico de transações*/
+
 .historico{
-    background: whitesmoke;
+    background: var(--qud-color);
     
     grid-area: h;
-
     display: flex;
     flex-direction: column;
+    padding: 0.5rem 1rem;
     
-    padding: 1rem;
-    
-    border-radius: 1rem;
 }
 
+/*Tabela contendo o histórico de transações*/
+
 .tblHistorico{
-    border: 2px solid cornflowerblue;
-    border-radius: 10px;
+    border: 2px solid var(--tbl-border-color);
+    border-radius: 0.5rem;
+    margin: 2% 0 0 0;
+    font-size: 1.25rem;
 }
 
 .tblHistorico thead{
-    background: cornflowerblue;
+    background: var(--tbl-border-color);
+    color: white;
     
 }
-
-
-
-
 
 /*Tabela de dados de Saída do cliente*/
 
 .dadoValorSaida{
     grid-area: vs;
 
-    background: whitesmoke;
+    background: var(--qud-color);
     
     
     display: flex;
@@ -156,12 +227,11 @@ Subsecção valores Entrada, saída e total de caixa
     justify-content: space-between;
     
     padding: 1rem;
-    border-radius: 1rem;
 
 }
 
 .dadoValorSaida h1{
-    background: cornflowerblue;
+    background: var(--br-dado-color);
     border-radius: 1rem;
     padding: 0 1.5rem;
     text-align: end;
@@ -169,22 +239,23 @@ Subsecção valores Entrada, saída e total de caixa
     
 }
 
+/*Caixa de valores que foram inserdos.*/
+
 .dadoValorEntrada{
     grid-area: ve;
 
-    background: whitesmoke;
+    background: var(--qud-color);
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     
     padding: 1rem;
-    border-radius: 1rem;
 
 }
 
 .dadoValorEntrada h1{
-    background: cornflowerblue;
+    background: var(--br-dado-color);
     border-radius: 1rem;
     padding: 0 1.5rem;
     text-align: end;
@@ -192,12 +263,11 @@ Subsecção valores Entrada, saída e total de caixa
     
 }
 
-/*Aumentando tamanho da título de valores*/
-.valor{
-    font-size: 1.5rem;
-}
-
-/*Total de dinheiro na conta*/
+/*
+=============================================================
+Total de dinheiro na conta.
+=============================================================
+*/
 
 .totalDinheiro{
     grid-area: vt;
@@ -205,7 +275,7 @@ Subsecção valores Entrada, saída e total de caixa
     flex-direction: column;
     justify-content: space-between;
 
-    background: whitesmoke;
+    background: var(--qud-color);
 
     border-radius: 1rem;
 
@@ -214,17 +284,133 @@ Subsecção valores Entrada, saída e total de caixa
 }
 
 .totalDinheiro h3{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
+/*Estilo da barra de dinheiro*/
+
 .totalDinheiro h1{
-    background: cornflowerblue;
+    background: var(--br-dado-color);
     border-radius: 1rem;
     padding: 0 1.5rem;
     text-align: end;
+}
+
+/*
+=============================================================
+Ajuste do botão de troca de temas.
+=============================================================
+*/
+
+/*Defindo posição, local, cor de fundo, tamanho e borda redonda*/
+
+.troca-tema{
+    position: fixed;
+    right: 1.5%;
+    bottom: 1.5%;
+    z-index: 1;
+    background: var(--qud-color);
+
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    translate: var(--tran-05);
+}
+
+
+/*Fazendo a div, que contém ambos os ícones, preencher todo o espaço, alinhar itens na Hor e Ver*/
+
+.troca-tema .lua-sol{
     
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        
+}
+
+.troca-tema:hover{
+    transform: scale(1.25);
+    background: gray;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.troca-tema .lua-sol{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/*Fazendo os dois ícones da lua e sol ocuparem o mesmo local*/
+
+.troca-tema .lua-sol i{
+    position: absolute;
+}
+
+.sun{
+    opacity: 0;
+}
+
+/*
+=============================================================
+Modo noturno.
+=============================================================
+*/
+/*------Cores - modo noturno/Dark mode theme------*/
+
+body.modo-noturno{
+    --body-color: #0a0b18; 
+    --qud-color: #222437;
+    --br-dado-color: #10153b;
+    --icone-bg-color: #5f56c3;
+    --tbl-border-color: #332a95;
+    color: white;
+}
+
+/*
+    Trocando a opacidade da lua e sol no modo noturno
+*/
+
+body.modo-noturno .sun{
+    opacity: 1;
+}
+
+body.modo-noturno .moon{
+    opacity: 0;
 }
 
 
 
+@media (max-width: 425px) {
+    
 
+    .subsection-valores{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .historico{
+        width: 100%;
+        height: 15rem;
+    }
+    .dadoValorSaida{
+        width: 100%;
+        min-height: 8rem;
+    }
+    .dadoValorEntrada{
+        width: 100%;
+        min-height: 8rem;
+        max-height: 100%;
+    }
+    .totalDinheiro{
+        width: 100%;
+        height: 8rem;
+
+    }
+}
